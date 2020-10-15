@@ -9,7 +9,7 @@ import {
 
 import axios from 'axios';
 
-export const loadTodos =() => async dispatch => {
+export const loadTodos = () => async dispatch => {
     dispatch(loadTodosInProgress());   
     await axios.get('http://localhost:8080/todos')
     .then(resp => {
